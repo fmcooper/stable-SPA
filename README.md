@@ -29,8 +29,8 @@ You must have Java installed on your computer to run all programs and
 Gurobi installed to run the IP program.
 
 For Gurobi installation follow the guide at: 
-http://www.gurobi.com/documentation/6.5/ making sure you install a license
-(academic lisences are avaliable free) and set the $PATH, $CLASSPATH and
+http://www.gurobi.com/documentation/6.5/ making sure you install a licence
+(academic licences are avaliable free) and set the $PATH, $CLASSPATH and
 $LD_LIBRARY_PATH variables as instructed.
 
 Download / git clone the stable-SPA software from Github:
