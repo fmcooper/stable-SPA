@@ -87,7 +87,9 @@ to find a minimum stable matching.
 # 5) running multiple instances
 
 Multiple instances can be run using the make files in the experiments
-directory.
+directory. Important note: If the make files are not executing the java
+program it may be because you have already created the results files! 
+Delete the results files if you want to re-run the experiments.
 
 There are 4 make files:
 - evaluationsApprox.mk
@@ -100,7 +102,7 @@ instances to run over. This file is easy to create (instructions below),
 and had been done for you for the example data.
 
 To run the approximation algorithm over all instances in 'instances.txt'
-use the following command:
+cd to the experiments directory and use the following command:
 
 ```bash
 $ make -f evaluationsApprox.mk
