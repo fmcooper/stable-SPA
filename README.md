@@ -66,7 +66,7 @@ To use the approximation algorithm run the following command from the
 stable-SPA directory:
 
 ```bash
-$ java approx/Main Evaluations/SIZE4/Instances/instance_0.txt
+$ java approx/Main Evaluations/SIZE4ex/Instances/instance_0.txt
 ```
 
 The result will be output to terminal.
@@ -75,7 +75,7 @@ To use the IP program run the following command from the stable-SPA
 directory:
 
 ```bash
-$ java ip/evaluate Evaluations/SIZE4/Instances/instance_0.txt -max
+$ java ip/evaluate Evaluations/SIZE4ex/Instances/instance_0.txt -max
 ```
 
 Again results will be output to terminal. Exchange '-max' for '-min'
@@ -99,7 +99,8 @@ Each make file looks at the 'instanceNames.txt' file to see which
 instances to run over. This file is easy to create (instructions below),
 and had been done for you for the example data.
 
-To run a make file over one instance at a time use the following command:
+To run the approximation algorithm over all instances in 'instances.txt'
+use the following command:
 
 ```bash
 $ make -f evaluationsApprox.mk
@@ -123,7 +124,7 @@ evaluationsOptimalMin.mk have been run, we can use the correctness.mk
 file to check the stability of each output.
 
 ```bash
-$ make -j 28 -f correctness.mk
+$ make -f correctness.mk
 ```
 
 All results files have now been created and can be browsed in the 
