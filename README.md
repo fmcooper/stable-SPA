@@ -40,7 +40,9 @@ Data to use with this program can be found at:
 http://dx.doi.org/10.5525/gla.researchdata.583 and is placed in the 
 'Evaluations' directory.
 
-The software is located at: https://doi.org/10.5281/zenodo.1183222
+The software version for the paper: A 3/2-approximation algorithm for the Student-Project Allocation problem
+Authors: Frances Cooper and David Manlove
+is located at: https://doi.org/10.5281/zenodo.1183222
 
 
 ******************************
