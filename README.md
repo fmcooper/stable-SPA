@@ -1,7 +1,6 @@
 # stable-SPA Readme
 3/2-approximation algorithm to the maximum stable matching for instances of SPA-ST
 ******************************
-******************************
 
 1) what is this software?
 2) software and data
@@ -37,7 +36,7 @@ Download / git clone the stable-SPA software from Github:
 https://github.com/fmcooper/stable-SPA
 
 Data to use with this program can be found at:
-http://dx.doi.org/10.5525/gla.researchdata.583 and is placed in the 
+https://doi.org/10.5281/zenodo.1186824 and is placed in the 
 'Evaluations' directory.
 
 The software version for the paper: A 3/2-approximation algorithm for the Student-Project Allocation problem
