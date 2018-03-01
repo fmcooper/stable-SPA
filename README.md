@@ -35,13 +35,11 @@ $LD_LIBRARY_PATH variables as instructed.
 Download / git clone the stable-SPA software from Github:
 https://github.com/fmcooper/stable-SPA
 
-Data to use with this program can be found at:
-https://doi.org/10.5281/zenodo.1186824 and is placed in the 
-'Evaluations' directory.
 
-The software version for the paper: A 3/2-approximation algorithm for the Student-Project Allocation problem
+Data and software version information can be found in the following paper: 
+A 3/2-approximation algorithm for the Student-Project Allocation problem
 Authors: Frances Cooper and David Manlove
-is located at: https://doi.org/10.5281/zenodo.1183222
+Submitted to SEA conference 2018
 
 
 ******************************
