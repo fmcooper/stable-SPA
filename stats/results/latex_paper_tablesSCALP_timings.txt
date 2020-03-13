@@ -1,0 +1,9 @@
+\begin{table}[tbp] \centerline{\begin{tabular}{ p{1.5cm} R{1.5cm} R{1.5cm} R{1.5cm} R{2.5cm} R{2cm} R{2cm} }\hline\hline & \multicolumn{3}{c}{instances feasible} & \multicolumn{3}{c}{average time (ms)}\\ 
+Case & A & Min & Max & A & Min & Max \\ 
+\hline SCALP1 & $10$ & $0$ & $9$ & $193.3$ & $1800000.0$ & $264818.6$ \\ 
+ SCALP2 & $10$ & $1$ & $10$ & $189.4$ & $1762884.4$ & $631225.2$ \\ 
+ SCALP3 & $10$ & $0$ & $3$ & $196.6$ & $1800000.0$ & $1524675.3$ \\ 
+ SCALP4 & $10$ & $0$ & $1$ & $248.5$ & $1800000.0$ & $1779420.1$ \\ 
+ SCALP5 & $10$ & $0$ & $0$ & $283.7$ & $1800000.0$ & $1800000.0$ \\ 
+ SCALP6 & $10$ & $0$ & $0$ & $288.4$ & $1800000.0$ & $1800000.0$ \\ 
+ \hline\hline \end{tabular}} \caption{Paper results - timings.} \label{} \end{table} 

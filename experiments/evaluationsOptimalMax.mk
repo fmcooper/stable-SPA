@@ -3,7 +3,7 @@ CP = '-cp $(CLASSPATH):../'
 SHELL := /bin/bash
 INSTANCESFILE := instanceNames.txt
 INSTANCES := $(shell cut -d' ' -f1 $(INSTANCESFILE))
-TIMEOUT := 1800
+TIMEOUT := 1
 
 
 results: $(foreach i, $(INSTANCES), $(subst Instances,ResultsOptimalMax,$i))
@@ -13,7 +13,7 @@ results: $(foreach i, $(INSTANCES), $(subst Instances,ResultsOptimalMax,$i))
 	# '-' at the beginning indicates that if there is an error code, make should not abort this rule
 	# the $$? must be used in the same shell as the previous command, hence it is added after a ';' at the end
 	# change 'timeout' to 'gtimeout' for mac
-	-timeout $(TIMEOUT) java -cp $(CP) ip/evaluate $(subst ResultsOptimalMax,Instances,$*.txt) -max > $*.txt;  if [ $$? -ne 0 ] ; then echo "timeout $(TIMEOUT)s" > $*.txt ; fi
+	-gtimeout $(TIMEOUT) java -cp $(CP) ip/evaluate $(subst ResultsOptimalMax,Instances,$*.txt) -max > $*.txt;  if [ $$? -ne 0 ] ; then echo "timeout $(TIMEOUT)s" > $*.txt ; fi
 
 
 

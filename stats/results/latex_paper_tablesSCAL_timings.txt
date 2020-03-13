@@ -1,0 +1,8 @@
+\begin{table}[tbp] \centerline{\begin{tabular}{ p{1.5cm} R{1.5cm} R{1.5cm} R{1.5cm} R{2.5cm} R{2cm} R{2cm} }\hline\hline & \multicolumn{3}{c}{instances feasible} & \multicolumn{3}{c}{average time (ms)}\\ 
+Case & A & Min & Max & A & Min & Max \\ 
+\hline SCAL1 & $10$ & $10$ & $10$ & $1393.8$ & $127980.3$ & $227764.3$ \\ 
+ SCAL2 & $10$ & $10$ & $9$ & $5356.7$ & $353272.3$ & $1166441.0$ \\ 
+ SCAL3 & $10$ & $10$ & $0$ & $13095.3$ & $785421.2$ & $1800000.0$ \\ 
+ SCAL4 & $10$ & $7$ & $0$ & $18883.5$ & $1283453.5$ & $1800000.0$ \\ 
+ SCAL5 & $10$ & $7$ & $0$ & $20993.0$ & $1455410.1$ & $1800000.0$ \\ 
+ \hline\hline \end{tabular}} \caption{Paper results - timings.} \label{} \end{table} 

@@ -1,0 +1,47 @@
+Correctness runthrough conducted at: 2020-03-03 14:20
+
+# experiment: PREF1	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: PREF6	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: TIES5	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: TIES2	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: PREF8	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SIZE4	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SIZE3	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: PREF9	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: TIES3	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: TIES4	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: PREF7	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SIZE2	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SIZE5	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SCAL2	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 1	total_stableMin_timeout: 0	totalPassed: 10	totalFailed: 0	
+# experiment: SCAL5	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 10	total_stableMin_timeout: 3	totalPassed: 10	totalFailed: 0	
+# experiment: SCAL4	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 10	total_stableMin_timeout: 3	totalPassed: 10	totalFailed: 0	
+# experiment: SCAL3	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 10	total_stableMin_timeout: 0	totalPassed: 10	totalFailed: 0	
+# experiment: SCALP4	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 9	total_stableMin_timeout: 10	totalPassed: 10	totalFailed: 0	
+# experiment: SCALP3	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 7	total_stableMin_timeout: 10	totalPassed: 10	totalFailed: 0	
+# experiment: SIZE10	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SCALP2	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 9	totalPassed: 10	totalFailed: 0	
+# experiment: SCALP5	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 10	total_stableMin_timeout: 10	totalPassed: 10	totalFailed: 0	
+# experiment: SIZE7	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SIZE9	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: PREF5	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: TIES8	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: PREF2	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: TIES1	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: TIES6	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SIZE8	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SIZE6	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SIZE1	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: TIES7	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: PREF3	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: TIES9	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: PREF4	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: SCAL1	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10	totalFailed: 0	
+# experiment: SCALP6	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 10	total_stableMin_timeout: 10	totalPassed: 10	totalFailed: 0	
+# experiment: SCALP1	totalChecked: 10	total_approx_timeout: 0	total_stableMax_timeout: 1	total_stableMin_timeout: 10	totalPassed: 10	totalFailed: 0	
+# experiment: TIES10	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: PREF10	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+# experiment: TIES11	totalChecked: 10000	total_approx_timeout: 0	total_stableMax_timeout: 0	total_stableMin_timeout: 0	totalPassed: 10000	totalFailed: 0	
+
+
+# fails: 
