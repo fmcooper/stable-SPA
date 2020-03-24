@@ -40,7 +40,7 @@ A 3/2-approximation algorithm for the Student-Project Allocation problem
 Authors: Frances Cooper and David Manlove
 Submitted to SEA conference 2018
 
-The data is located at: https://doi.org/10.5281/zenodo.1186824
+The data is located at: https://doi.org/10.5281/zenodo.1186823
 The software is located at: https://doi.org/10.5281/zenodo.1183221
 
 
