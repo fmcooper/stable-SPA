@@ -56,6 +56,8 @@ def main():
 
     # for each experiment type
     for ind, instance_type in enumerate(exp_names):
+        if instance_type == ".DS_Store":
+            continue
         print(instance_type)
 
         collectResults(

@@ -11,7 +11,7 @@ import os
 from scipy.optimize import curve_fit
 
 np.set_printoptions(suppress=True)
-prePath = '../Evaluations/'
+prePath = sys.argv[1]
 
 ################# variables
 SIZE = ["SIZE1", "SIZE2", "SIZE3", "SIZE4", "SIZE5", "SIZE6", "SIZE7", "SIZE8", "SIZE9", "SIZE10"]

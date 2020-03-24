@@ -35,7 +35,9 @@ def main():
 
     # for each experiment type
     for cname in correctnessNames:
-        pathResults = prePath + cname + "/Correctness/"
+        if cname == ".DS_Store":
+            continue
+        pathResults = prePath + "/" + cname + "/Correctness/"
 
         totalCorrectnessChecked = 0
 
