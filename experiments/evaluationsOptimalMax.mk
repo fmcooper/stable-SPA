@@ -3,7 +3,7 @@ CP = '-cp $(CLASSPATH):../'
 SHELL := /bin/bash
 INSTANCESFILE := instanceNames.txt
 INSTANCES := $(shell cut -d' ' -f1 $(INSTANCESFILE))
-TIMEOUT := 1
+TIMEOUT := 1800
 
 
 results: $(foreach i, $(INSTANCES), $(subst Instances,ResultsOptimalMax,$i))
