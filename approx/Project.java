@@ -11,6 +11,8 @@ import shared_resources.*;
 public class Project {
 	/* <p>The index of this project.</p> */ 
 	int pInd;
+	/* <p>The number of this project.</p> */ 
+	int pNum;
 	/* <p>Lecturer offering this project.</p> */ 
 	Lecturer lec;
 	/* <p>A list of students assigned to this project.</p> */ 
@@ -28,6 +30,7 @@ public class Project {
 		int numAssigned = 0;
 		this.upperQ = upperQ;
 		pInd = i;
+		pNum = pInd + 1;
 		students = new ArrayList<Student>();
 	}
 

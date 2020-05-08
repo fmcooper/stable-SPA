@@ -12,6 +12,8 @@ public class Student {
 	int phase;
 	/* <p>The index of this student.</p> */ 
 	int sInd;
+	/* <p>The number of this student.</p> */ 
+	int sNum;
 	/* <p>Preference list array - remains unchanged.</p> */
 	private Project[] prefList;
 	/* <p>Rank of preference list - remains unchanged.</p> */
@@ -36,6 +38,7 @@ public class Student {
 		proj = null;
 		phase = 1;
 		sInd = num;
+		sNum = sInd + 1;
 
 		this.prefList = prefList;
 		this.ranks = ranks;

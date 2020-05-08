@@ -7,6 +7,7 @@
 3) running a single instance
 4) running all experiments
 5) interpreting results files
+6) running a trace
 
 ******************************
 
@@ -105,4 +106,27 @@ For each instance (e.g. ``Evaluation/SIZE1/Instances/instance_0.txt``), there wi
 * ``Evaluation/SIZE1/ResultsOptimalMax/instance_0.txt``: This is the results file for the maximum stable matching found by the IP.
 * ``Evaluation/SIZE1/ResultsOptimalMin/instance_0.txt``: This is the results file for the minimim stable matching found by the IP.
 * ``Evaluation/SIZE1/Correctness/instance_0.txt``: This is the correctness testing summary for this instance.
+
+
+
+******************************
+
+# 5) running a trace
+
+It is possible to print a trace of the workings of the approximation algorithm for a particular instance. 
+
+First compile the code from the root directory:
+
+```bash
+javac -d . shared_resources/*.java
+javac -d . approx/*.java
+```
+
+Next, set the ``trace`` boolean in the ``approx/Approx.java`` file to true.
+
+Finally, from the root directory, run a single instance instance. For example:
+
+```bash
+java approx/Main examples/example_1/example_1.txt
+``` 
 

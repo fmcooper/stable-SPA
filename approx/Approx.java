@@ -19,14 +19,17 @@ public class Approx {
 	/** <p>List of all lecturers.</p> */
 	Lecturer[] lecturers;
 
+	/** <p>Indicates whether we are performing a trace.</p> */
+	boolean trace;
+
 	/**
 	 * <p> Constructor for the algorithm - runs the algorithm. </p>
 	 * 
 	 * @param instanceModel
 	 */
 	public Approx(Model model) {
+		trace = false;
 		this.model = model;
-
 		run();
 	}
 
@@ -36,6 +39,8 @@ public class Approx {
 	 * 
 	 */
 	public void run() {
+		String traceString = "";
+
 		// create projects
 		projects = new Project[model.numProjects];
 		for (int i = 0; i < projects.length; i++) {
@@ -91,40 +96,46 @@ public class Approx {
 			Student s = phase1or2Avaliable.get(0);
 			// find one of the students favourite project
 			int pInd = s.getFavourite(projects);
-
-			//System.out.println("testing s: " + s.sInd + " p: " + pInd + " rank: " + s.getRank(projects[pInd]));
 			Project p = projects[pInd];
 			int lInd = model.projLecturers[pInd];
 			Lecturer l = lecturers[lInd];
 
+			traceString += "student " + s.sNum + " applies to project " + p.pNum + ":\n";
+
 			// if p is fully avaliable
 			if (p.isFullyAvaliable()) {
+				traceString += "   - algorithm placement information: project " + p.pNum + " is fully available\n";
+				traceString += "   - pair (" + s.sNum + ", " + p.pNum + ") added\n";
 				p.addStudent(s);
 				phase1or2Avaliable.remove(phase1or2Avaliable.indexOf(s));
 			}
 
 			// else if p is undersubscribed, q is full and (q is precarious or q meta-prefers s to a worst assignee)
 			else if ((p.numAssigned < p.upperQ) && (l.numAssigned == l.upperQ) && (l.precarious() || (l.metaPrefers(s) != null))) {
-				
-				//System.out.println(p.numAssigned);
+				traceString += "   - algorithm placement information: project " + p.pNum + " is undersubscribed, lecturer " + l.lNum + " is full\n";
 				Student stReplaceMe = null;
 
 				// if l is precarious
 				if (l.precarious()) {
 					stReplaceMe = l.getPrecarious();
+					traceString += "   - student " + stReplaceMe.sNum + " is found as precarious\n";
 				}
 				// else if l is not precarious
 				else {
 					stReplaceMe = l.metaPrefers(s);
+					traceString += "   - student " + stReplaceMe.sNum + " is a worst student for lecturer " + l.lNum + "\n";
+					traceString += "   - student " + stReplaceMe.sNum + " removes project " + stReplaceMe.proj.pNum + " from pref list - student " + stReplaceMe.sNum + " is in phase: " + stReplaceMe.phase + "\n";
 					stReplaceMe.removePref(stReplaceMe.proj);
 				}
 
 				// remove worst student from whoever they are attached to
 				Project replaceP = stReplaceMe.proj;
 				replaceP.removeStudent(stReplaceMe);
+				traceString += "   - pair (" + stReplaceMe.sNum + ", " + replaceP.pNum + ") removed\n";
 
 				// add new student to p
 				p.addStudent(s);
+				traceString += "   - pair (" + s.sNum + ", " + p.pNum + ") added\n";
 
 				phase1or2Avaliable.remove(phase1or2Avaliable.indexOf(s));
 				if (stReplaceMe.phase != 3) {
@@ -134,25 +145,30 @@ public class Approx {
 
 			// else if p is full and (p is precarious or q meta-prefers s to a worst assignee assigned to p)
 			else if ((p.numAssigned == p.upperQ) && (p.precarious() || l.metaPrefers(s, p) != null)) {
-
+				traceString += "   - algorithm placement information: project " + p.pNum + " is full\n";
 				Student stReplaceMe = null;
 
 				// if p is precarious
 				if (p.precarious()) {
 					stReplaceMe = p.getPrecarious();
+					traceString += "   - student " + stReplaceMe.sNum + " is found as precarious\n";
 				}
 				// else if p is not precarious
 				else {
 					stReplaceMe = l.metaPrefers(s, p);
 					stReplaceMe.removePref(stReplaceMe.proj);
+					traceString += "   - student " + stReplaceMe.sNum + " is a worst student for project " + p.pNum + "\n";
+					traceString += "   - student " + stReplaceMe.sNum + " removes project " + p.pNum + " from pref list - student " + stReplaceMe.sNum + " is in phase: " + stReplaceMe.phase + "\n";
 				}
 
 				// remove worst student from whoever they are attached to
 				Project replaceP = stReplaceMe.proj;
 				replaceP.removeStudent(stReplaceMe);
+				traceString += "   - pair (" + stReplaceMe.sNum + ", " + replaceP.pNum + ") removed\n";
 
 				// add new student to p
 				p.addStudent(s);
+				traceString += "   - pair (" + s.sNum + ", " + p.pNum + ") added\n";
 
 				phase1or2Avaliable.remove(phase1or2Avaliable.indexOf(s));
 				if (stReplaceMe.phase != 3) {
@@ -163,6 +179,8 @@ public class Approx {
 			// else remove the preference list value
 			else {
 				s.removePref(p);
+				traceString += "   - algorithm placement information: student " + s.sNum + " rejected\n";
+				traceString += "   - student " + s.sNum + " removes project " + p.pNum + " from pref list - student " + s.sNum + " is in phase: " + s.phase + "\n";
 				if (s.phase == 3) {
 					phase1or2Avaliable.remove(phase1or2Avaliable.indexOf(s));
 				}	
@@ -187,10 +205,14 @@ public class Approx {
 						// if the project is not full and the lecturer is the same then swap over
 						Project testerProj = ps.get(index);
 						if (testerProj.numAssigned < testerProj.upperQ && testerProj.lec == currentProj.lec) {
+							traceString += "Promoting student " + s.sNum + "\n";
+							traceString += "   - algorithm placement information: promoting students\n";
+							traceString += "   - pair (" + s.sNum + ", " + s.proj.pNum + ") removed\n";
 							s.proj.removeStudent(s);
 							testerProj.addStudent(s);
 							found = true;
 							promoteInIteration = true;
+							traceString += "   - pair (" + s.sNum + ", " + s.proj.pNum + ") added\n";
 						}
 						index++;
 					}
@@ -208,6 +230,10 @@ public class Approx {
 				finalProj = students[i].proj.pInd;
 			}
 			model.studentAssignments[i] = finalProj;
+		}
+
+		if (trace){
+			System.out.println(traceString);
 		}
 	}
 }

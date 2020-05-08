@@ -1,0 +1,108 @@
+student 1 applies to project 2:
+   - algorithm placement information: project 2 is fully available
+   - pair (1, 2) added
+student 2 applies to project 2:
+   - algorithm placement information: project 2 is fully available
+   - pair (2, 2) added
+student 3 applies to project 7:
+   - algorithm placement information: project 7 is fully available
+   - pair (3, 7) added
+student 4 applies to project 7:
+   - algorithm placement information: project 7 is full
+   - student 3 is found as precarious
+   - pair (3, 7) removed
+   - pair (4, 7) added
+student 5 applies to project 1:
+   - algorithm placement information: project 1 is undersubscribed, lecturer 1 is full
+   - student 1 is found as precarious
+   - pair (1, 2) removed
+   - pair (5, 1) added
+student 6 applies to project 1:
+   - algorithm placement information: project 1 is full
+   - student 5 is a worst student for project 1
+   - student 5 removes project 1 from pref list - student 5 is in phase: 1
+   - pair (5, 1) removed
+   - pair (6, 1) added
+student 7 applies to project 4:
+   - algorithm placement information: project 4 is fully available
+   - pair (7, 4) added
+student 8 applies to project 5:
+   - algorithm placement information: project 5 is undersubscribed, lecturer 3 is full
+   - student 7 is a worst student for lecturer 3
+   - student 7 removes project 4 from pref list - student 7 is in phase: 1
+   - pair (7, 4) removed
+   - pair (8, 5) added
+student 9 applies to project 5:
+   - algorithm placement information: student 9 rejected
+   - student 9 removes project 5 from pref list - student 9 is in phase: 2
+student 9 applies to project 5:
+   - algorithm placement information: project 5 is full
+   - student 8 is a worst student for project 5
+   - student 8 removes project 5 from pref list - student 8 is in phase: 2
+   - pair (8, 5) removed
+   - pair (9, 5) added
+student 10 applies to project 9:
+   - algorithm placement information: project 9 is fully available
+   - pair (10, 9) added
+student 11 applies to project 9:
+   - algorithm placement information: student 11 rejected
+   - student 11 removes project 9 from pref list - student 11 is in phase: 1
+student 11 applies to project 10:
+   - algorithm placement information: project 10 is fully available
+   - pair (11, 10) added
+student 12 applies to project 11:
+   - algorithm placement information: project 11 is undersubscribed, lecturer 6 is full
+   - student 10 is a worst student for lecturer 6
+   - student 10 removes project 9 from pref list - student 10 is in phase: 1
+   - pair (10, 9) removed
+   - pair (12, 11) added
+student 3 applies to project 8:
+   - algorithm placement information: project 8 is fully available
+   - pair (3, 8) added
+student 1 applies to project 3:
+   - algorithm placement information: project 3 is fully available
+   - pair (1, 3) added
+student 5 applies to project 3:
+   - algorithm placement information: project 3 is fully available
+   - pair (5, 3) added
+student 7 applies to project 6:
+   - algorithm placement information: project 6 is undersubscribed, lecturer 4 is full
+   - student 4 is a worst student for lecturer 4
+   - student 4 removes project 7 from pref list - student 4 is in phase: 1
+   - pair (4, 7) removed
+   - pair (7, 6) added
+student 8 applies to project 5:
+   - algorithm placement information: student 8 rejected
+   - student 8 removes project 5 from pref list - student 8 is in phase: 3
+student 10 applies to project 12:
+   - algorithm placement information: project 12 is fully available
+   - pair (10, 12) added
+student 4 applies to project 7:
+   - algorithm placement information: student 4 rejected
+   - student 4 removes project 7 from pref list - student 4 is in phase: 3
+Promoting student 11
+   - algorithm placement information: promoting students
+   - pair (11, 10) removed
+   - pair (11, 9) added
+
+# Date: 2020/5/8  Time: 13:17:4
+
+Instance_feasible 
+Matching_size: 10/12
+Matching_cost: 12
+Matching_max_lecturer_abs_diff: 2
+Sum_lecturer_abs_diff: 10
+Sum_sq_lecturer_abs_diff: 16
+Sum_sq_ranks: 16
+Sum_sq_diffs_and_ranks: 32
+Matching_profile: < 8 2 0 >
+Matching_degree: 2
+Duration_ModCreation_milliseconds: 69
+Duration_GetSolution_milliseconds: 6
+Duration_CollectRes_milliseconds: 0
+
+RawResults: 
+3 2 8 0 3 1 6 0 5 12 9 11 
+
+Duration_Total_milliseconds: 76
+

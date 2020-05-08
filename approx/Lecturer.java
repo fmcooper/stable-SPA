@@ -10,6 +10,8 @@ import shared_resources.*;
 public class Lecturer {
 	/* <p>The index of this lecturer.</p> */
 	int lInd;
+	/* <p>The number of this lecturer.</p> */
+	int lNum;
 	/* <p>This lecturers preference list.</p> */
 	public Student[] prefList;
 	/* <p>The ranks of this lecturers preference list.</p> */
@@ -29,6 +31,7 @@ public class Lecturer {
 		numAssigned = 0;
 		projects = new ArrayList<Project>();
 		lInd = num;
+		lNum = lInd + 1;
 		this.upperQ = upperQ;
 
 		this.prefList = prefList;
