@@ -262,7 +262,7 @@ def outputToFile(instance_type, total_instances, all_instances, numStudents, num
                 inst.approx_ratio_max_set = True
                 inst.approx_ratio_max = float(inst.approx_size) / float(inst.max_size)
                 if inst.approx_ratio_max < minRatio:
-                    minRatio = ratio
+                    minRatio = inst.approx_ratio_max
 
         if not inst.min_timeout and not inst.max_timeout:
             if inst.min_size > 0.0:
@@ -281,10 +281,10 @@ def outputToFile(instance_type, total_instances, all_instances, numStudents, num
 
     approx_ratio_maxs = np.array([inst.approx_ratio_max for inst in all_instances])
     approx_ratio_maxs_mask = np.array([inst.approx_ratio_max_set for inst in all_instances])
-    min_ratio_maxs = np.array([inst.approx_ratio_max for inst in all_instances])
+    min_ratio_maxs = np.array([inst.min_ratio_max for inst in all_instances])
     min_ratio_maxs_mask = np.array([inst.min_ratio_max_set for inst in all_instances])
-    avstatsFile.write('{}_approx_min_ratio {:0.4f}\n'.format(instance_type, getMasked(approx_ratio_maxs, approx_ratio_maxs_mask)))
-    avstatsFile.write('{}_approx_min_ratio {:0.4f}\n'.format(instance_type, getMasked(min_ratio_maxs, min_ratio_maxs_mask)))
+    avstatsFile.write('{}av_approx_ratio_max {:0.4f}\n'.format(instance_type, getAverage(getMasked(approx_ratio_maxs, approx_ratio_maxs_mask))))
+    avstatsFile.write('{}av_min_ratio_max {:0.4f}\n'.format(instance_type, getAverage(getMasked(min_ratio_maxs, min_ratio_maxs_mask))))
 
 
     avstatsFile.close()
@@ -300,7 +300,7 @@ def writeStatsToFile(avstatsFile, instance_type, stats_name, stats):
 # returns an np array with respect to a mask
 def getMasked(mylist, mask):
     nparray = np.array(mylist)
-    return nparray[msk]
+    return nparray[mask]
 
 
 # returns an array with negative elements removed
