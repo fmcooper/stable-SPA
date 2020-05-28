@@ -23,6 +23,10 @@ class instance:
         self.max_duration_total_ms = -1
         self.min_size = -1
         self.min_duration_total_ms = -1
+        self.approx_ratio_max = -1.0
+        self.min_ratio_max = -1.0
+        self.approx_ratio_max_set = False
+        self.min_ratio_max_set = False
 
         self.approx_timeout = False
         self.max_timeout = False
@@ -245,7 +249,9 @@ def outputToFile(instance_type, total_instances, all_instances, numStudents, num
     for inst in all_instances:
         # compare the size approx with size max
         # 1. count the number of times approx is optimal
-        # 2. find the minimum ratio
+        # 2. count the number of times approx is within 2 percent of optimal
+        # 3. find the minimum ratio
+        # 4. save the ratio for each instance 
 
         if not inst.approx_timeout and not inst.max_timeout:
             if inst.approx_size == inst.max_size:
@@ -253,9 +259,15 @@ def outputToFile(instance_type, total_instances, all_instances, numStudents, num
             if inst.approx_size >= float(inst.max_size) * 0.98:
                 countOptWithin2percent += 1
             if inst.approx_size > 0.0:
-                ratio = float(inst.approx_size) / float(inst.max_size)
-                if ratio < minRatio:
+                inst.approx_ratio_max_set = True
+                inst.approx_ratio_max = float(inst.approx_size) / float(inst.max_size)
+                if inst.approx_ratio_max < minRatio:
                     minRatio = ratio
+
+        if not inst.min_timeout and not inst.max_timeout:
+            if inst.min_size > 0.0:
+                inst.min_ratio_max_set = True
+                inst.min_ratio_max = float(inst.min_size) / float(inst.max_size)
      
     num_max_completed = total_instances - max_num_timeout 
     if not num_max_completed == 0:
@@ -267,6 +279,14 @@ def outputToFile(instance_type, total_instances, all_instances, numStudents, num
 
     avstatsFile.write('{}_approx_min_ratio {:0.4f}\n'.format(instance_type, minRatio))
 
+    approx_ratio_maxs = np.array([inst.approx_ratio_max for inst in all_instances])
+    approx_ratio_maxs_mask = np.array([inst.approx_ratio_max_set for inst in all_instances])
+    min_ratio_maxs = np.array([inst.approx_ratio_max for inst in all_instances])
+    min_ratio_maxs_mask = np.array([inst.min_ratio_max_set for inst in all_instances])
+    avstatsFile.write('{}_approx_min_ratio {:0.4f}\n'.format(instance_type, getMasked(approx_ratio_maxs, approx_ratio_maxs_mask)))
+    avstatsFile.write('{}_approx_min_ratio {:0.4f}\n'.format(instance_type, getMasked(min_ratio_maxs, min_ratio_maxs_mask)))
+
+
     avstatsFile.close()
 
 
@@ -277,6 +297,10 @@ def writeStatsToFile(avstatsFile, instance_type, stats_name, stats):
     avstatsFile.write('{}_95Per_{} {:0.1f}\n'.format(instance_type, stats_name, getPercentile(stats, 95.0)))
 
 
+# returns an np array with respect to a mask
+def getMasked(mylist, mask):
+    nparray = np.array(mylist)
+    return nparray[msk]
 
 
 # returns an array with negative elements removed

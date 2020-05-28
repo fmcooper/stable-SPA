@@ -11,7 +11,6 @@ import os
 from scipy.optimize import curve_fit
 
 np.set_printoptions(suppress=True)
-prePath = sys.argv[1]
 
 ################# variables
 SIZE = ["SIZE1", "SIZE2", "SIZE3", "SIZE4", "SIZE5", "SIZE6", "SIZE7", "SIZE8", "SIZE9", "SIZE10"]
@@ -29,6 +28,8 @@ SIZE_vals = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
 PREF_vals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 TIES_vals = [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]
 experiment_vals=[SIZE_vals, PREF_vals, TIES_vals]
+
+bound = 2/3
 
 # Increasing probability of ties experimental results.
 # Scalability experimental results.
@@ -112,7 +113,7 @@ def createPlots():
             curve_log = False
             xlabel = "$t_s = t_l$"
         
-        createPlot(curve_log, experimentsNames[i], experiment_vals[i], xlabel, "Size of stable matching.", \
+        createPlot(curve_log, experimentsNames[i], experiment_vals[i], xlabel, "Size of stable matching", \
             approx_median, approx_5, approx_95, "Approx", \
             max_median, size_max_5, max_95, "Min", \
             min_median, size_min_5, min_95, "Max")
@@ -139,7 +140,7 @@ def createPlot(curve_log, plot_label, xlist, xlabel, ylabel, \
     
 
     # starting the plotting
-    matplotlib.rcParams.update({'font.size': 14})
+    # matplotlib.rcParams.update({'font.size': 14})
     plt.figure()
     plt.figure(facecolor='w', edgecolor='k', figsize=(7, 5))
     plt.xlabel(xlabel)
@@ -174,6 +175,7 @@ def createPlot(curve_log, plot_label, xlist, xlabel, ylabel, \
     plt.plot(xlist, max_median, 'o', markersize=4, label=max_label, color='orangered')
     plt.plot(xlist, approx_median, '*', markersize=4, label=approx_label, color='skyblue')
     plt.plot(xlist, min_median, 's', markersize=4, label=min_label, color='seagreen')
+    plt.plot(xlist, [x*bound for x in max_median], '^', markersize=4, label="2/3 of Max", color='gold')
 
     xlist = np.linspace(xlist[0], xlist[-1], 200)
     
@@ -182,6 +184,7 @@ def createPlot(curve_log, plot_label, xlist, xlabel, ylabel, \
         plt.plot(xlist, func2D(np.log(xlist), maxCV[0], maxCV[1], maxCV[2]), '-', color='orangered')
         plt.plot(xlist, func2D(np.log(xlist), approxCV[0], approxCV[1], approxCV[2]), '-', color='skyblue')
         plt.plot(xlist, func2D(np.log(xlist), minCV[0], minCV[1], minCV[2]), '-', color='seagreen')
+        plt.plot(xlist, func2D(np.log(xlist), maxCV[0]*bound, maxCV[1]*bound, maxCV[2]*bound), '-', color='gold')
 
         # plot the confidence intervals
         plt.fill_between(xlist, func2D(np.log(xlist), max_5_CV[0], max_5_CV[1], max_5_CV[2]), \
@@ -190,11 +193,14 @@ def createPlot(curve_log, plot_label, xlist, xlabel, ylabel, \
                                 func2D(np.log(xlist), approx_95_CV[0], approx_95_CV[1], approx_95_CV[2]), color='skyblue', alpha=.5)
         plt.fill_between(xlist, func2D(np.log(xlist), min_5_CV[0], min_5_CV[1], min_5_CV[2]), \
                                 func2D(np.log(xlist), min_95_CV[0], min_95_CV[1], min_95_CV[2]), color='seagreen', alpha=.5)
+        plt.fill_between(xlist, func2D(np.log(xlist), max_5_CV[0]*bound, max_5_CV[1]*bound, max_5_CV[2]*bound), \
+                                func2D(np.log(xlist), max_95_CV[0]*bound, max_95_CV[1]*bound, max_95_CV[2]*bound), color='gold', alpha=.5)
     else:
         # plot the best fit curves
         plt.plot(xlist, func2D(xlist, maxCV[0], maxCV[1], maxCV[2]), '-', color='orangered')
         plt.plot(xlist, func2D(xlist, approxCV[0], approxCV[1], approxCV[2]), '-', color='skyblue')
         plt.plot(xlist, func2D(xlist, minCV[0], minCV[1], minCV[2]), '-', color='seagreen')
+        plt.plot(xlist, func2D(xlist, maxCV[0]*bound, maxCV[1]*bound, maxCV[2]*bound), '-', color='gold')
 
         # plot the confidence intervals
         plt.fill_between(xlist, func2D(xlist, max_5_CV[0], max_5_CV[1], max_5_CV[2]), \
@@ -203,6 +209,8 @@ def createPlot(curve_log, plot_label, xlist, xlabel, ylabel, \
                                 func2D(xlist, approx_95_CV[0], approx_95_CV[1], approx_95_CV[2]), color='skyblue', alpha=.5)
         plt.fill_between(xlist, func2D(xlist, min_5_CV[0], min_5_CV[1], min_5_CV[2]), \
                                 func2D(xlist, min_95_CV[0], min_95_CV[1], min_95_CV[2]), color='seagreen', alpha=.5)
+        plt.fill_between(xlist, func2D(xlist, max_5_CV[0]*bound, max_5_CV[1]*bound, max_5_CV[2]*bound), \
+                                func2D(xlist, max_95_CV[0]*bound, max_95_CV[1]*bound, max_95_CV[2]*bound), color='gold', alpha=.5)
 
     # plt.plot([100, 1000], [100, 1000000], "--", label="Gradient 4n")
 
@@ -216,7 +224,7 @@ def createPlot(curve_log, plot_label, xlist, xlabel, ylabel, \
     filename = dirName + "/" + plot_label + "_plot.pdf"
     plt.savefig(filename)
     plt.close()
-    plt.rcParams.update(plt.rcParamsDefault)
+    # plt.rcParams.update(plt.rcParamsDefault)
 
 
 #####################################
@@ -228,11 +236,11 @@ def createPaperTables():
         latexPaperFile = open(latexpaper, 'w')
         latexPaperFile.write('')
         latexPaperFile.close
-        latexPaperFile.write('\\begin{table}[tbp] \centerline{')
-        latexPaperFile.write('\\begin{tabular}{ p{1.3cm} R{1.3cm} R{1.3cm} R{1.3cm} R{2.2cm} R{1.3cm} R{1.3cm} R{1.3cm} R{1.6cm} R{2.2cm} R{1.3cm} R{1.3cm} }') 
+        latexPaperFile.write(' \centerline{')
+        latexPaperFile.write('\\begin{tabular}{ R{1.5cm} | R{1.8cm} R{1.8cm} R{1.8cm} R{2cm} R{1.3cm} R{1.3cm} R{1.3cm} R{1.6cm} R{2cm} R{1.3cm} R{1.3cm} }') 
         latexPaperFile.write('\hline\hline ')
-        latexPaperFile.write('& \multirow{2}{1.5cm}{minimum A/Max} & \multirow{2}{1.5cm}{\% A=Max} & \multirow{2}{1.5cm}{\% A$\geq 0.98 $Max} & \multicolumn{5}{c}{average size} & \multicolumn{3}{c}{average total time (ms)}\\\\ \n')
-        latexPaperFile.write('Case &  &  &  & A & Min & Max & A/Max & Min/Max & A & Min & Max \\\\ \n')
+        latexPaperFile.write('&  &  & & \multicolumn{5}{c}{Mean size} & \multicolumn{3}{c}{Mean time (ms)}\\\\ \n')
+        latexPaperFile.write('Case & Minimum A/Max  & \% A=Max  & \% A$\geq 0.98 $Max  & A & Min & Max & A/Max & Min/Max & A & Min & Max \\\\ \n')
         latexPaperFile.write('\hline ')
 
         for i in range(1, listTypesPerExp[index] + 1):
@@ -254,35 +262,60 @@ def createPaperTables():
                 d[exp+str(i)+'_Av_min_duration_total_ms'][0], d[exp+str(i)+'_Av_max_duration_total_ms'][0]))
 
         # finishing the latex results file
-        latexPaperFile.write('\hline\hline \end{tabular}} \caption{Paper results.} \label{} \end{table} ')
+        latexPaperFile.write('\hline\hline \end{tabular}} ')
+        latexPaperFile.close 
+
+
+    # detailed look at matching sizes for the three approaches
+    for index, exp in enumerate(experimentsNames):
+        latexpaper = dirName + "/" + 'latex_paper_tables_sizes' + exp + '.txt'
+        latexPaperFile = open(latexpaper, 'w')
+        latexPaperFile.write('')
+        latexPaperFile.close
+        latexPaperFile.write(' \centerline{')
+        latexPaperFile.write('\\begin{tabular}{ R{1.5cm} | R{1.3cm} R{1.3cm} R{1.3cm} R{2cm} R{1.3cm} R{1.3cm} R{2cm} R{1.3cm} R{1.3cm} }') 
+        latexPaperFile.write('\hline\hline ')
+        latexPaperFile.write('& \multicolumn{3}{c}{Approx} &  \multicolumn{3}{c}{Minimum}  &  \multicolumn{3}{c}{Maximum} \\\\ \n')
+        latexPaperFile.write('Case & Median & $5$th & $95$th & Median & $5$th & $95$th & Median & $5$th & $95$th \\\\ \n')
+        latexPaperFile.write('\hline ')
+
+        for i in range(1, listTypesPerExp[index] + 1):
+            latexPaperFile.write('{} & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ \\\\ \n '.format(\
+                exp + str(i), \
+                d[exp+str(i)+'_median_approx_size'][0], d[exp+str(i)+'_5Per_approx_size'][0], d[exp+str(i)+'_95Per_approx_size'][0], \
+                d[exp+str(i)+'_median_min_size'][0], d[exp+str(i)+'_5Per_min_size'][0], d[exp+str(i)+'_95Per_min_size'][0], \
+                d[exp+str(i)+'_median_max_size'][0], d[exp+str(i)+'_5Per_max_size'][0], d[exp+str(i)+'_95Per_max_size'][0], ))
+
+        # finishing the latex results file
+        latexPaperFile.write('\hline\hline \end{tabular}} ')
         latexPaperFile.close 
 
 
     
-        latexpaper = dirName + "/" + 'latex_paper_tables' + exp + '_timings.txt'
-        latexPaperFile = open(latexpaper, 'w')
-        latexPaperFile.write('')
-        latexPaperFile.close
-        latexPaperFile.write('\\begin{table}[tbp] \centerline{')
-        latexPaperFile.write('\\begin{tabular}{ p{1.5cm} R{1.5cm} R{1.5cm} R{1.5cm} R{2.5cm} R{2cm} R{2cm} }') 
-        latexPaperFile.write('\hline\hline ')
-        latexPaperFile.write('& \multicolumn{3}{c}{instances feasible} & \multicolumn{3}{c}{average time (ms)}\\\\ \n')
-        latexPaperFile.write('Case & A & Min & Max & A & Min & Max \\\\ \n')
-        latexPaperFile.write('\hline ')
+        # latexpaper = dirName + "/" + 'latex_paper_tables' + exp + '_timings.txt'
+        # latexPaperFile = open(latexpaper, 'w')
+        # latexPaperFile.write('')
+        # latexPaperFile.close
+        # latexPaperFile.write('\\begin{table}[tbp] \centerline{')
+        # latexPaperFile.write('\\begin{tabular}{ p{1.5cm} R{1.5cm} R{1.5cm} R{1.5cm} R{2.5cm} R{2cm} R{2cm} }') 
+        # latexPaperFile.write('\hline\hline ')
+        # latexPaperFile.write('& \multicolumn{3}{c}{instances feasible} & \multicolumn{3}{c}{average time (ms)}\\\\ \n')
+        # latexPaperFile.write('Case & A & Min & Max & A & Min & Max \\\\ \n')
+        # latexPaperFile.write('\hline ')
 
-        for i in range(1, listTypesPerExp[index] + 1):
-            app_num_feas = int(d[exp+str(i)+'_numInstances'][0]) - int(d[exp+str(i)+'_approx_NumTimeout'][0])
-            max_num_feas = int(d[exp+str(i)+'_numInstances'][0]) - int(d[exp+str(i)+'_max_NumTimeout'][0])
-            min_num_feas = int(d[exp+str(i)+'_numInstances'][0]) - int(d[exp+str(i)+'_min_NumTimeout'][0])
-            latexPaperFile.write('{} & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ \\\\ \n '.format(\
-                exp + str(i), app_num_feas, min_num_feas, max_num_feas, \
-                d[exp+str(i)+'_Av_approx_duration_total_ms'][0], \
-                d[exp+str(i)+'_Av_min_duration_total_ms'][0], \
-                d[exp+str(i)+'_Av_max_duration_total_ms'][0]))
+        # for i in range(1, listTypesPerExp[index] + 1):
+        #     app_num_feas = int(d[exp+str(i)+'_numInstances'][0]) - int(d[exp+str(i)+'_approx_NumTimeout'][0])
+        #     max_num_feas = int(d[exp+str(i)+'_numInstances'][0]) - int(d[exp+str(i)+'_max_NumTimeout'][0])
+        #     min_num_feas = int(d[exp+str(i)+'_numInstances'][0]) - int(d[exp+str(i)+'_min_NumTimeout'][0])
+        #     latexPaperFile.write('{} & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ \\\\ \n '.format(\
+        #         exp + str(i), app_num_feas, min_num_feas, max_num_feas, \
+        #         d[exp+str(i)+'_Av_approx_duration_total_ms'][0], \
+        #         d[exp+str(i)+'_Av_min_duration_total_ms'][0], \
+        #         d[exp+str(i)+'_Av_max_duration_total_ms'][0]))
 
-        # finishing the latex results file
-        latexPaperFile.write('\hline\hline \end{tabular}} \caption{Paper results - timings.} \label{} \end{table} ')
-        latexPaperFile.close  
+        # # finishing the latex results file
+        # latexPaperFile.write('\hline\hline \end{tabular}} \caption{Paper results - timings.} \label{} \end{table} ')
+        # latexPaperFile.close  
     
  
 
