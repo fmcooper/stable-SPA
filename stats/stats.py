@@ -246,18 +246,11 @@ def createPaperTables():
         for i in range(1, listTypesPerExp[index] + 1):
             d[exp+str(i)+'_max_NumTimeout']
 
-            if int(d[exp+str(i)+'_max_NumTimeout'][0]) == int(d[exp+str(i)+'_numInstances'][0]):
-                sizeAppCompOpt = -1.0
-                sizeMinCompOpt = -1.0
-            else:
-                sizeAppCompOpt = '{:0.3f}'.format(float(d[exp+str(i)+'_Av_approx_size_moredp'][0]) / float(d[exp+str(i)+'_Av_max_size_moredp'][0]))
-                sizeMinCompOpt = '{:0.3f}'.format(float(d[exp+str(i)+'_Av_min_size_moredp'][0]) / float(d[exp+str(i)+'_Av_max_size_moredp'][0]))
-
             latexPaperFile.write('{} & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ & ${}$ \\\\ \n '.format(\
                 exp + str(i), d[exp+str(i)+'_approx_min_ratio'][0], d[exp+str(i)+'_approx_opt'][0], \
                 d[exp+str(i)+'_approx_2pc'][0], d[exp+str(i)+'_Av_approx_size'][0], \
                 d[exp+str(i)+'_Av_min_size'][0], d[exp+str(i)+'_Av_max_size'][0], \
-                sizeAppCompOpt, sizeMinCompOpt, \
+                d[exp+str(i)+'av_approx_ratio_max'][0], d[exp+str(i)+'av_min_ratio_max'][0], \
                 d[exp+str(i)+'_Av_approx_duration_total_ms'][0], \
                 d[exp+str(i)+'_Av_min_duration_total_ms'][0], d[exp+str(i)+'_Av_max_duration_total_ms'][0]))
 

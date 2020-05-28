@@ -1,4 +1,4 @@
-Results collected at: 2020-03-03 16:38
+Results collected at: 2020-05-28 10:54
 
 
 # stats for all instance types of PREF1
@@ -39,6 +39,8 @@ PREF1_Av_min_size_moredp 215.00810000
 PREF1_approx_opt 100.0
 PREF1_approx_2pc 100.0
 PREF1_approx_min_ratio 1.0000
+PREF1av_approx_ratio_max 1.0000
+PREF1av_min_ratio_max 1.0000
 
 # stats for all instance types of PREF10
 PREF10_numStudents 300       
@@ -78,6 +80,8 @@ PREF10_Av_min_size_moredp 297.35790000
 PREF10_approx_opt 87.3
 PREF10_approx_2pc 100.0
 PREF10_approx_min_ratio 0.9900
+PREF10av_approx_ratio_max 0.9995
+PREF10av_min_ratio_max 0.9913
 
 # stats for all instance types of PREF2
 PREF2_numStudents 300       
@@ -117,6 +121,8 @@ PREF2_Av_min_size_moredp 249.10970000
 PREF2_approx_opt 12.3
 PREF2_approx_2pc 99.0
 PREF2_approx_min_ratio 0.9699
+PREF2av_approx_ratio_max 0.9926
+PREF2av_min_ratio_max 0.9433
 
 # stats for all instance types of PREF3
 PREF3_numStudents 300       
@@ -156,6 +162,8 @@ PREF3_Av_min_size_moredp 266.44410000
 PREF3_approx_opt 1.2
 PREF3_approx_2pc 84.0
 PREF3_approx_min_ratio 0.9617
+PREF3av_approx_ratio_max 0.9867
+PREF3av_min_ratio_max 0.9361
 
 # stats for all instance types of PREF4
 PREF4_numStudents 300       
@@ -195,6 +203,8 @@ PREF4_Av_min_size_moredp 277.04630000
 PREF4_approx_opt 1.0
 PREF4_approx_2pc 82.8
 PREF4_approx_min_ratio 0.9623
+PREF4av_approx_ratio_max 0.9866
+PREF4av_min_ratio_max 0.9426
 
 # stats for all instance types of PREF5
 PREF5_numStudents 300       
@@ -234,6 +244,8 @@ PREF5_Av_min_size_moredp 283.93370000
 PREF5_approx_opt 4.2
 PREF5_approx_2pc 95.1
 PREF5_approx_min_ratio 0.9661
+PREF5av_approx_ratio_max 0.9902
+PREF5av_min_ratio_max 0.9537
 
 # stats for all instance types of PREF6
 PREF6_numStudents 300       
@@ -273,6 +285,8 @@ PREF6_Av_min_size_moredp 288.74920000
 PREF6_approx_opt 15.7
 PREF6_approx_2pc 99.5
 PREF6_approx_min_ratio 0.9732
+PREF6av_approx_ratio_max 0.9940
+PREF6av_min_ratio_max 0.9653
 
 # stats for all instance types of PREF7
 PREF7_numStudents 300       
@@ -312,6 +326,8 @@ PREF7_Av_min_size_moredp 292.07340000
 PREF7_approx_opt 36.2
 PREF7_approx_2pc 100.0
 PREF7_approx_min_ratio 0.9767
+PREF7av_approx_ratio_max 0.9966
+PREF7av_min_ratio_max 0.9746
 
 # stats for all instance types of PREF8
 PREF8_numStudents 300       
@@ -351,6 +367,8 @@ PREF8_Av_min_size_moredp 294.43850000
 PREF8_approx_opt 58.2
 PREF8_approx_2pc 100.0
 PREF8_approx_min_ratio 0.9833
+PREF8av_approx_ratio_max 0.9982
+PREF8av_min_ratio_max 0.9819
 
 # stats for all instance types of PREF9
 PREF9_numStudents 300       
@@ -390,6 +408,8 @@ PREF9_Av_min_size_moredp 296.12310000
 PREF9_approx_opt 75.5
 PREF9_approx_2pc 100.0
 PREF9_approx_min_ratio 0.9866
+PREF9av_approx_ratio_max 0.9991
+PREF9av_min_ratio_max 0.9873
 
 # stats for all instance types of SCAL1
 SCAL1_numStudents 10000     
@@ -429,6 +449,8 @@ SCAL1_Av_min_size_moredp 9140.30000000
 SCAL1_approx_opt 0.0
 SCAL1_approx_2pc 90.0
 SCAL1_approx_min_ratio 0.9797
+SCAL1av_approx_ratio_max 0.9812
+SCAL1av_min_ratio_max 0.9324
 
 # stats for all instance types of SCAL2
 SCAL2_numStudents 20000     
@@ -468,6 +490,8 @@ SCAL2_Av_min_size_moredp 18286.50000000
 SCAL2_approx_opt 0.0
 SCAL2_approx_2pc 66.7
 SCAL2_approx_min_ratio 0.9792
+SCAL2av_approx_ratio_max 0.9806
+SCAL2av_min_ratio_max 0.9322
 
 # stats for all instance types of SCAL3
 SCAL3_numStudents 30000     
@@ -507,6 +531,8 @@ SCAL3_Av_min_size_moredp 27414.40000000
 SCAL3_approx_opt -1.0
 SCAL3_approx_2pc -1.0
 SCAL3_approx_min_ratio 1.0000
+SCAL3av_approx_ratio_max -1.0000
+SCAL3av_min_ratio_max -1.0000
 
 # stats for all instance types of SCAL4
 SCAL4_numStudents 40000     
@@ -546,6 +572,8 @@ SCAL4_Av_min_size_moredp 36576.71428571
 SCAL4_approx_opt -1.0
 SCAL4_approx_2pc -1.0
 SCAL4_approx_min_ratio 1.0000
+SCAL4av_approx_ratio_max -1.0000
+SCAL4av_min_ratio_max -1.0000
 
 # stats for all instance types of SCAL5
 SCAL5_numStudents 50000     
@@ -585,6 +613,8 @@ SCAL5_Av_min_size_moredp 45694.28571429
 SCAL5_approx_opt -1.0
 SCAL5_approx_2pc -1.0
 SCAL5_approx_min_ratio 1.0000
+SCAL5av_approx_ratio_max -1.0000
+SCAL5av_min_ratio_max -1.0000
 
 # stats for all instance types of SCALP1
 SCALP1_numStudents 500       
@@ -624,6 +654,8 @@ SCALP1_Av_min_size_moredp -1.00000000
 SCALP1_approx_opt 100.0
 SCALP1_approx_2pc 100.0
 SCALP1_approx_min_ratio 1.0000
+SCALP1av_approx_ratio_max 1.0000
+SCALP1av_min_ratio_max -1.0000
 
 # stats for all instance types of SCALP2
 SCALP2_numStudents 500       
@@ -663,6 +695,8 @@ SCALP2_Av_min_size_moredp 500.00000000
 SCALP2_approx_opt 100.0
 SCALP2_approx_2pc 100.0
 SCALP2_approx_min_ratio 1.0000
+SCALP2av_approx_ratio_max 1.0000
+SCALP2av_min_ratio_max 1.0000
 
 # stats for all instance types of SCALP3
 SCALP3_numStudents 500       
@@ -702,6 +736,8 @@ SCALP3_Av_min_size_moredp -1.00000000
 SCALP3_approx_opt 100.0
 SCALP3_approx_2pc 100.0
 SCALP3_approx_min_ratio 1.0000
+SCALP3av_approx_ratio_max 1.0000
+SCALP3av_min_ratio_max -1.0000
 
 # stats for all instance types of SCALP4
 SCALP4_numStudents 500       
@@ -741,6 +777,8 @@ SCALP4_Av_min_size_moredp -1.00000000
 SCALP4_approx_opt 100.0
 SCALP4_approx_2pc 100.0
 SCALP4_approx_min_ratio 1.0000
+SCALP4av_approx_ratio_max 1.0000
+SCALP4av_min_ratio_max -1.0000
 
 # stats for all instance types of SCALP5
 SCALP5_numStudents 500       
@@ -780,6 +818,8 @@ SCALP5_Av_min_size_moredp -1.00000000
 SCALP5_approx_opt -1.0
 SCALP5_approx_2pc -1.0
 SCALP5_approx_min_ratio 1.0000
+SCALP5av_approx_ratio_max -1.0000
+SCALP5av_min_ratio_max -1.0000
 
 # stats for all instance types of SCALP6
 SCALP6_numStudents 500       
@@ -819,6 +859,8 @@ SCALP6_Av_min_size_moredp -1.00000000
 SCALP6_approx_opt -1.0
 SCALP6_approx_2pc -1.0
 SCALP6_approx_min_ratio 1.0000
+SCALP6av_approx_ratio_max -1.0000
+SCALP6av_min_ratio_max -1.0000
 
 # stats for all instance types of SIZE1
 SIZE1_numStudents 100       
@@ -858,6 +900,8 @@ SIZE1_Av_min_size_moredp 91.97560000
 SIZE1_approx_opt 17.8
 SIZE1_approx_2pc 62.7
 SIZE1_approx_min_ratio 0.9286
+SIZE1av_approx_ratio_max 0.9859
+SIZE1av_min_ratio_max 0.9408
 
 # stats for all instance types of SIZE10
 SIZE10_numStudents 1000      
@@ -897,6 +941,8 @@ SIZE10_Av_min_size_moredp 914.73990000
 SIZE10_approx_opt 0.0
 SIZE10_approx_2pc 68.0
 SIZE10_approx_min_ratio 0.9701
+SIZE10av_approx_ratio_max 0.9816
+SIZE10av_min_ratio_max 0.9337
 
 # stats for all instance types of SIZE2
 SIZE2_numStudents 200       
@@ -936,6 +982,8 @@ SIZE2_Av_min_size_moredp 183.41900000
 SIZE2_approx_opt 1.6
 SIZE2_approx_2pc 62.6
 SIZE2_approx_min_ratio 0.9585
+SIZE2av_approx_ratio_max 0.9840
+SIZE2av_min_ratio_max 0.9373
 
 # stats for all instance types of SIZE3
 SIZE3_numStudents 300       
@@ -975,6 +1023,8 @@ SIZE3_Av_min_size_moredp 274.91560000
 SIZE3_approx_opt 0.1
 SIZE3_approx_2pc 63.7
 SIZE3_approx_min_ratio 0.9556
+SIZE3av_approx_ratio_max 0.9831
+SIZE3av_min_ratio_max 0.9361
 
 # stats for all instance types of SIZE4
 SIZE4_numStudents 400       
@@ -1014,6 +1064,8 @@ SIZE4_Av_min_size_moredp 366.36340000
 SIZE4_approx_opt 0.0
 SIZE4_approx_2pc 65.6
 SIZE4_approx_min_ratio 0.9644
+SIZE4av_approx_ratio_max 0.9827
+SIZE4av_min_ratio_max 0.9354
 
 # stats for all instance types of SIZE5
 SIZE5_numStudents 500       
@@ -1053,6 +1105,8 @@ SIZE5_Av_min_size_moredp 457.69580000
 SIZE5_approx_opt 0.0
 SIZE5_approx_2pc 66.5
 SIZE5_approx_min_ratio 0.9654
+SIZE5av_approx_ratio_max 0.9824
+SIZE5av_min_ratio_max 0.9349
 
 # stats for all instance types of SIZE6
 SIZE6_numStudents 600       
@@ -1092,6 +1146,8 @@ SIZE6_Av_min_size_moredp 549.27720000
 SIZE6_approx_opt 0.0
 SIZE6_approx_2pc 66.8
 SIZE6_approx_min_ratio 0.9641
+SIZE6av_approx_ratio_max 0.9821
+SIZE6av_min_ratio_max 0.9346
 
 # stats for all instance types of SIZE7
 SIZE7_numStudents 700       
@@ -1131,6 +1187,8 @@ SIZE7_Av_min_size_moredp 640.48770000
 SIZE7_approx_opt 0.0
 SIZE7_approx_2pc 65.4
 SIZE7_approx_min_ratio 0.9679
+SIZE7av_approx_ratio_max 0.9819
+SIZE7av_min_ratio_max 0.9341
 
 # stats for all instance types of SIZE8
 SIZE8_numStudents 800       
@@ -1170,6 +1228,8 @@ SIZE8_Av_min_size_moredp 732.03530000
 SIZE8_approx_opt 0.0
 SIZE8_approx_2pc 67.4
 SIZE8_approx_min_ratio 0.9684
+SIZE8av_approx_ratio_max 0.9818
+SIZE8av_min_ratio_max 0.9340
 
 # stats for all instance types of SIZE9
 SIZE9_numStudents 900       
@@ -1209,6 +1269,8 @@ SIZE9_Av_min_size_moredp 823.39940000
 SIZE9_approx_opt 0.0
 SIZE9_approx_2pc 68.6
 SIZE9_approx_min_ratio 0.9653
+SIZE9av_approx_ratio_max 0.9817
+SIZE9av_min_ratio_max 0.9339
 
 # stats for all instance types of TIES1
 TIES1_numStudents 300       
@@ -1248,6 +1310,8 @@ TIES1_Av_min_size_moredp 283.97110000
 TIES1_approx_opt 100.0
 TIES1_approx_2pc 100.0
 TIES1_approx_min_ratio 1.0000
+TIES1av_approx_ratio_max 1.0000
+TIES1av_min_ratio_max 1.0000
 
 # stats for all instance types of TIES10
 TIES10_numStudents 300       
@@ -1287,6 +1351,8 @@ TIES10_Av_min_size_moredp 258.88000000
 TIES10_approx_opt 0.5
 TIES10_approx_2pc 61.9
 TIES10_approx_min_ratio 0.9529
+TIES10av_approx_ratio_max 0.9821
+TIES10av_min_ratio_max 0.8656
 
 # stats for all instance types of TIES11
 TIES11_numStudents 300       
@@ -1326,6 +1392,8 @@ TIES11_Av_min_size_moredp 254.76050000
 TIES11_approx_opt 1.0
 TIES11_approx_2pc 74.2
 TIES11_approx_min_ratio 0.9467
+TIES11av_approx_ratio_max 0.9842
+TIES11av_min_ratio_max 0.8506
 
 # stats for all instance types of TIES2
 TIES2_numStudents 300       
@@ -1365,6 +1433,8 @@ TIES2_Av_min_size_moredp 281.99090000
 TIES2_approx_opt 38.0
 TIES2_approx_2pc 100.0
 TIES2_approx_min_ratio 0.9792
+TIES2av_approx_ratio_max 0.9968
+TIES2av_min_ratio_max 0.9866
 
 # stats for all instance types of TIES3
 TIES3_numStudents 300       
@@ -1404,6 +1474,8 @@ TIES3_Av_min_size_moredp 279.85320000
 TIES3_approx_opt 12.1
 TIES3_approx_2pc 99.3
 TIES3_approx_min_ratio 0.9722
+TIES3av_approx_ratio_max 0.9933
+TIES3av_min_ratio_max 0.9722
 
 # stats for all instance types of TIES4
 TIES4_numStudents 300       
@@ -1443,6 +1515,8 @@ TIES4_Av_min_size_moredp 277.64280000
 TIES4_approx_opt 3.4
 TIES4_approx_2pc 95.2
 TIES4_approx_min_ratio 0.9655
+TIES4av_approx_ratio_max 0.9900
+TIES4av_min_ratio_max 0.9576
 
 # stats for all instance types of TIES5
 TIES5_numStudents 300       
@@ -1482,6 +1556,8 @@ TIES5_Av_min_size_moredp 275.07700000
 TIES5_approx_opt 1.0
 TIES5_approx_2pc 82.5
 TIES5_approx_min_ratio 0.9626
+TIES5av_approx_ratio_max 0.9865
+TIES5av_min_ratio_max 0.9423
 
 # stats for all instance types of TIES6
 TIES6_numStudents 300       
@@ -1521,6 +1597,8 @@ TIES6_Av_min_size_moredp 272.37670000
 TIES6_approx_opt 0.4
 TIES6_approx_2pc 66.7
 TIES6_approx_min_ratio 0.9558
+TIES6av_approx_ratio_max 0.9837
+TIES6av_min_ratio_max 0.9266
 
 # stats for all instance types of TIES7
 TIES7_numStudents 300       
@@ -1560,6 +1638,8 @@ TIES7_Av_min_size_moredp 269.41750000
 TIES7_approx_opt 0.2
 TIES7_approx_2pc 52.9
 TIES7_approx_min_ratio 0.9486
+TIES7av_approx_ratio_max 0.9816
+TIES7av_min_ratio_max 0.9111
 
 # stats for all instance types of TIES8
 TIES8_numStudents 300       
@@ -1599,6 +1679,8 @@ TIES8_Av_min_size_moredp 266.20100000
 TIES8_approx_opt 0.2
 TIES8_approx_2pc 46.4
 TIES8_approx_min_ratio 0.9527
+TIES8av_approx_ratio_max 0.9803
+TIES8av_min_ratio_max 0.8957
 
 # stats for all instance types of TIES9
 TIES9_numStudents 300       
@@ -1638,3 +1720,5 @@ TIES9_Av_min_size_moredp 262.67000000
 TIES9_approx_opt 0.2
 TIES9_approx_2pc 50.4
 TIES9_approx_min_ratio 0.9467
+TIES9av_approx_ratio_max 0.9805
+TIES9av_min_ratio_max 0.8804
