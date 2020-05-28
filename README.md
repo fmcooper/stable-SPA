@@ -115,16 +115,16 @@ For each instance (e.g. ``Evaluation/SIZE1/Instances/instance_0.txt``), there wi
 
 It is possible to print a trace of the workings of the approximation algorithm for a particular instance. 
 
-First compile the code from the root directory:
+First, set the ``trace`` boolean in the ``approx/Approx.java`` file to true.
+
+Next, compile the code from the root directory:
 
 ```bash
 javac -d . shared_resources/*.java
 javac -d . approx/*.java
 ```
 
-Next, set the ``trace`` boolean in the ``approx/Approx.java`` file to true.
-
-Finally, from the root directory, run a single instance instance. For example:
+Finally, from the root directory, run a single instance. For example:
 
 ```bash
 java approx/Main examples/example_1/example_1.txt
