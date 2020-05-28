@@ -1,5 +1,5 @@
-\begin{table}[tbp] \centerline{\begin{tabular}{ p{1.3cm} R{1.3cm} R{1.3cm} R{1.3cm} R{2.2cm} R{1.3cm} R{1.3cm} R{1.3cm} R{1.6cm} R{2.2cm} R{1.3cm} R{1.3cm} }\hline\hline & \multirow{2}{1.5cm}{minimum A/Max} & \multirow{2}{1.5cm}{\% A=Max} & \multirow{2}{1.5cm}{\% A$\geq 0.98 $Max} & \multicolumn{5}{c}{average size} & \multicolumn{3}{c}{average total time (ms)}\\ 
-Case &  &  &  & A & Min & Max & A/Max & Min/Max & A & Min & Max \\ 
+ \centerline{\begin{tabular}{ R{1.5cm} | R{1.8cm} R{1.8cm} R{1.8cm} R{2cm} R{1.3cm} R{1.3cm} R{1.3cm} R{1.6cm} R{2cm} R{1.3cm} R{1.3cm} }\hline\hline &  &  & & \multicolumn{5}{c}{Mean size} & \multicolumn{3}{c}{Mean time (ms)}\\ 
+Case & Minimum A/Max  & \% A=Max  & \% A$\geq 0.98 $Max  & A & Min & Max & A/Max & Min/Max & A & Min & Max \\ 
 \hline TIES1 & $1.0000$ & $100.0$ & $100.0$ & $284.0$ & $284.0$ & $284.0$ & $1.000$ & $1.000$ & $59.2$ & $184.0$ & $186.9$ \\ 
  TIES2 & $0.9792$ & $38.0$ & $100.0$ & $284.9$ & $282.0$ & $285.8$ & $0.997$ & $0.987$ & $61.2$ & $192.4$ & $194.7$ \\ 
  TIES3 & $0.9722$ & $12.1$ & $99.3$ & $285.9$ & $279.9$ & $287.9$ & $0.993$ & $0.972$ & $61.7$ & $201.0$ & $203.1$ \\ 
@@ -11,4 +11,4 @@ Case &  &  &  & A & Min & Max & A/Max & Min/Max & A & Min & Max \\
  TIES9 & $0.9467$ & $0.2$ & $50.4$ & $292.5$ & $262.7$ & $298.3$ & $0.980$ & $0.880$ & $65.2$ & $1234.1$ & $427.5$ \\ 
  TIES10 & $0.9529$ & $0.5$ & $61.9$ & $293.7$ & $258.9$ & $299.1$ & $0.982$ & $0.866$ & $59.6$ & $2903.4$ & $409.1$ \\ 
  TIES11 & $0.9467$ & $1.0$ & $74.2$ & $294.8$ & $254.8$ & $299.5$ & $0.984$ & $0.851$ & $60.4$ & $5756.9$ & $377.4$ \\ 
- \hline\hline \end{tabular}} \caption{Paper results.} \label{} \end{table} 
+ \hline\hline \end{tabular}} 

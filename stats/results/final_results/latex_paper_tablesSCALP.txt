@@ -1,9 +1,9 @@
-\begin{table}[tbp] \centerline{\begin{tabular}{ p{1.3cm} R{1.3cm} R{1.3cm} R{1.3cm} R{2.2cm} R{1.3cm} R{1.3cm} R{1.3cm} R{1.6cm} R{2.2cm} R{1.3cm} R{1.3cm} }\hline\hline & \multirow{2}{1.5cm}{minimum A/Max} & \multirow{2}{1.5cm}{\% A=Max} & \multirow{2}{1.5cm}{\% A$\geq 0.98 $Max} & \multicolumn{5}{c}{average size} & \multicolumn{3}{c}{average total time (ms)}\\ 
-Case &  &  &  & A & Min & Max & A/Max & Min/Max & A & Min & Max \\ 
+ \centerline{\begin{tabular}{ R{1.5cm} | R{1.8cm} R{1.8cm} R{1.8cm} R{2cm} R{1.3cm} R{1.3cm} R{1.3cm} R{1.6cm} R{2cm} R{1.3cm} R{1.3cm} }\hline\hline &  &  & & \multicolumn{5}{c}{Mean size} & \multicolumn{3}{c}{Mean time (ms)}\\ 
+Case & Minimum A/Max  & \% A=Max  & \% A$\geq 0.98 $Max  & A & Min & Max & A/Max & Min/Max & A & Min & Max \\ 
 \hline SCALP1 & $1.0000$ & $100.0$ & $100.0$ & $500.0$ & $-1.0$ & $500.0$ & $1.000$ & $-0.002$ & $193.3$ & $1800000.0$ & $264818.6$ \\ 
  SCALP2 & $1.0000$ & $100.0$ & $100.0$ & $500.0$ & $500.0$ & $500.0$ & $1.000$ & $1.000$ & $189.4$ & $1762884.4$ & $631225.2$ \\ 
  SCALP3 & $1.0000$ & $100.0$ & $100.0$ & $500.0$ & $-1.0$ & $500.0$ & $1.000$ & $-0.002$ & $196.6$ & $1800000.0$ & $1524675.3$ \\ 
  SCALP4 & $1.0000$ & $100.0$ & $100.0$ & $500.0$ & $-1.0$ & $500.0$ & $1.000$ & $-0.002$ & $248.5$ & $1800000.0$ & $1779420.1$ \\ 
  SCALP5 & $1.0000$ & $-1.0$ & $-1.0$ & $500.0$ & $-1.0$ & $-1.0$ & $-1.0$ & $-1.0$ & $283.7$ & $1800000.0$ & $1800000.0$ \\ 
  SCALP6 & $1.0000$ & $-1.0$ & $-1.0$ & $500.0$ & $-1.0$ & $-1.0$ & $-1.0$ & $-1.0$ & $288.4$ & $1800000.0$ & $1800000.0$ \\ 
- \hline\hline \end{tabular}} \caption{Paper results.} \label{} \end{table} 
+ \hline\hline \end{tabular}} 
