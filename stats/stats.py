@@ -215,7 +215,12 @@ def createPlot(curve_log, plot_label, xlist, xlabel, ylabel, \
     # plt.plot([100, 1000], [100, 1000000], "--", label="Gradient 4n")
 
 
-    # plt.xlim(xmin=0, xmax=1000)
+    if plot_label == 'PREF':   
+        plt.xlim(xmin=1, xmax=10)
+    if plot_label == 'SIZE':   
+        plt.xlim(xmin=0, xmax=1000)
+    if plot_label == 'TIES':   
+        plt.xlim(xmin=0, xmax=0.5)
     # plt.yscale('log')
     plt.grid()
     plt.legend()
